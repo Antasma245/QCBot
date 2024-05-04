@@ -6,5 +6,5 @@ const botClientId = process.env.botClientId;
 const rest = new REST().setToken(botToken);
 
 rest.put(Routes.applicationCommands(botClientId), { body: [] })
-	.then(() => console.log('Successfully removed all application (/) commands.'))
+	.then(() => console.log(`Successfully removed all application (/) commands.`))
 	.catch(console.error);

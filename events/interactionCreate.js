@@ -26,7 +26,8 @@ module.exports = {
 					embeds: [ new EmbedBuilder()
 						.setColor(`6ba4b8`)
 						.setTitle(`New error report!`)
-						.setDescription(`Occured on ${new Date().toUTCString()} while executing '/${interaction.commandName}'\n\`\`\`\n${interactionError}\n\`\`\``) ],
+						.setDescription(`Occured on ${new Date().toUTCString()} while executing '/${interaction.commandName}'\n\`\`\`\n${interactionError}\n\`\`\``)
+						.setFooter({ text: `Full message is available in console` }) ],
 					flags: [ 4096 ] // Silent message flag
 				});
 

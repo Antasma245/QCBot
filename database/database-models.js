@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('database', 'user', 'password', {
 	dialect: 'sqlite',
 	logging: false,
-	storage: 'database.sqlite',
+	storage: './database/database.sqlite',
 });
 
 const SubmissionsTable = sequelize.define('SubmissionsTable', {

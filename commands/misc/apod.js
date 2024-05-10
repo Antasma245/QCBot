@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
+const env = require('dotenv').config();
 const nasaApiKey = process.env.nasaApiKey;
 
 module.exports = {

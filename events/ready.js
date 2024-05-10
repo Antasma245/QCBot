@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const { SubmissionsTable, ControllerStatsTable } = require('../database-models');
+const { SubmissionsTable, ControllerStatsTable } = require('../database/database-models');
 
 module.exports = {
 	name: Events.ClientReady,

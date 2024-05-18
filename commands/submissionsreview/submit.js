@@ -88,7 +88,7 @@ module.exports = {
         const matchedLink = modelLink.match(linkPattern);
 
         if (!matchedLink) {
-            return await interaction.editReply(`Invalid link. Please note that all models are required to have a "resolve" Huggingface link. Additionally, your model files must be placed in a \`.zip\` archive (no \`.rar\`, \`.7z\`, ...).\nPlease follow this tutorial to make sure you get the correct Huggingface link: <https://docs.aihub.wtf/extra/model-maker-role/>.`);
+            return await interaction.editReply(`Invalid link. Please note that all models are required to have a "resolve" Huggingface link. Additionally, your model files must be placed in a \`.zip\` archive (no \`.rar\`, \`.7z\`, ...).\nPlease follow this tutorial to make sure you get the correct Huggingface link: <https://docs.aihub.wtf/essentials/voice-models/#uploading-to-hugging-face>.`);
         }
 
 

@@ -28,7 +28,7 @@ module.exports = {
         }
         
         const inputSubmissionId = await interaction.options.getInteger('submission-id');
-        const comment = await interaction.options.getString('comment');
+        const comment = await interaction.options.getString('comment') ?? 'N/A';
         
         const submissionTag = await SubmissionsTable.findOne({ where: { storedSubmissionId: inputSubmissionId } });
 

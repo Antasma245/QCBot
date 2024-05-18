@@ -1,7 +1,7 @@
 {
   "name": "qcbot",
   "version": "1.0.0",
-  "description": "A Discord bot to help manage voice model submissions in the AI HUB server.",
+  "description": "A Discord application to help manage voice model submissions in the AI HUB server.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

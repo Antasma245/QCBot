@@ -84,7 +84,7 @@ module.exports = {
         }
 
         // Checks if the link is of the form 'https://huggingface.co/XXXX/XXXX/resolve/main/XXXX.zip'
-        const linkPattern = /https:\/\/huggingface\.co\/\w+\/\w+\/resolve\/main\/\w+\.zip(\?.*)?/;
+        const linkPattern = /https:\/\/huggingface\.co\/\S+\/\S+\/resolve\/main\/\S+\.zip/;
         const matchedLink = modelLink.match(linkPattern);
 
         if (!matchedLink) {

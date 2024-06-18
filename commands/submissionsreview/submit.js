@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { SubmissionsTable } = require('../../database/database-models');
 const env = require('dotenv').config();
+const blacklistRoleId = process.env.blacklistRoleId;
 const submissionsChannelId = process.env.submissionsChannelId;
 const grantedRoleId = process.env.grantedRoleId;
 const grantedChannelId = process.env.grantedChannelId;
@@ -62,6 +63,8 @@ module.exports = {
 
         if (await interaction.member.roles.cache.has(grantedRoleId)) {
             return await interaction.editReply(`You already have the desired role. You can post your models in the https://discord.com/channels/${interaction.guild.id}/${grantedChannelId} channel.`);
+        } else if (await interaction.member.roles.cache.has(blacklistRoleId)) {
+            return await interaction.editReply(`You do not have permission to use this command.`);
         }
 
         const applicantId = interaction.user.id;

@@ -8,7 +8,7 @@ const logsChannelId = process.env.logsChannelId;
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('role')
-        .setDescription('Manage the Model Maker role')
+        .setDescription('Manage special roles')
         .addStringOption(option =>
             option.setName('action')
                 .setDescription('Give or remove the role')
